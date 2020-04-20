@@ -1,0 +1,24 @@
+.bg {
+  /* The image used */
+  background-image: url("src/assets/images/hero-image.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .page-title {
+    background-color: #111111;
+    color: white;
+    opacity: 0.65;
+  }
+
+
+  .card {
+    background-color: #e6e6e6;
+  }
+}
