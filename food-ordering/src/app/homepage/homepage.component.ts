@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {LoginService} from "../services/login/login.service";
 
 @Component({
   selector: 'app-homepage',
@@ -7,10 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   isSignUp = true;
+  form = new FormGroup({
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email
+    ]),
+    password: new FormControl('', [
+      Validators.required
+    ]),
+  });
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  get email() {return this.form.get('email');}
+
+  get password() {return this.form.get('password');}
+
+  onSubmit() {
+    if (this.isSignUp) {
+      this.loginService.signUp(this.form.value)
+        .subscribe(data => {
+          console.log(data);
+          this.redirectToMenuPage();
+        }, error => {
+          console.log(error);
+        })
+    } else {
+      this.loginService.login(this.form.value)
+        .subscribe(data => {
+          console.log(data);
+          this.redirectToMenuPage();
+        }, error => {
+          console.log(error);
+        })
+    }
+  }
+
+  redirectToMenuPage() {
+
   }
 
 }
