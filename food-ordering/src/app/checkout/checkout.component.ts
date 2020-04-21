@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from '../services/cart/cart.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import {CheckoutService} from '../services/checkout/checkout.service';
 
 @Component({
   selector: 'app-checkout',
@@ -34,7 +35,8 @@ export class CheckoutComponent implements OnInit {
     })
   });
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+              private checkoutService: CheckoutService) { }
 
   ngOnInit(): void {
     const loadCartValue = this.cartService.loadCart();
@@ -58,9 +60,16 @@ export class CheckoutComponent implements OnInit {
   }
 
   placeOrder() {
-    const result = {
+    const checkoutData = {
       ...this.checkoutForm.value,
       ...this.order,
     };
+
+    this.checkoutService.postOrder(checkoutData)
+      .subscribe(data => {
+        console.log(data);
+      }, err => {
+        console.log(err);
+      });
   }
 }
