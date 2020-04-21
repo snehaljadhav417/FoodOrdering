@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuService} from "../services/menu/menu.service";
-import {ActivatedRoute} from "@angular/router";
+import {MenuService} from '../services/menu/menu.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -31,7 +31,7 @@ export class MenuComponent implements OnInit {
 
   divideDataToChunks(cuisine: string) {
     this.chunkedData = [];
-    for(let i = 0; i < this.content[cuisine].length; i += this.chunkSize) {
+    for (let i = 0; i < this.content[cuisine].length; i += this.chunkSize) {
       this.chunkedData.push(this.content[cuisine].slice(i, i + this.chunkSize));
     }
   }
