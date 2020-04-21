@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {LoginService} from "../services/login/login.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-homepage',
@@ -19,7 +20,8 @@ export class HomepageComponent implements OnInit {
     ]),
   });
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService,
+              private router: Router) { }
 
   ngOnInit(): void {}
 
@@ -48,7 +50,7 @@ export class HomepageComponent implements OnInit {
   }
 
   redirectToMenuPage() {
-
+    this.router.navigate(['/menu']);
   }
 
 }

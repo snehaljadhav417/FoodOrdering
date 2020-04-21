@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:3000',
   loginUrl: '/login',
-  signUpUrl: '/signup'
+  signUpUrl: '/signup',
+  menu: '/getMenu'
 };
 
 /*

@@ -5,17 +5,12 @@ import {environment} from "../../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class MenuService {
 
   constructor(private http: HttpClient) { }
 
-  login(body) {
-    const url = environment.loginUrl;
-    return this.http.post(url, body);
-  }
-
-  signUp(body) {
-    const url = environment.signUpUrl;
-    return this.http.post(url, body);
+  getMenu() {
+    const url = environment.menu;
+    return this.http.get(url);
   }
 }

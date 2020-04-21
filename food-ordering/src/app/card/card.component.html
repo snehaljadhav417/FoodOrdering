@@ -1,0 +1,22 @@
+<div class="card">
+  <figure class="content-img" [ngStyle]="{'background-image': 'url(' + dish.image + ')'}"></figure>
+  <div class="card-body">
+    <h5 class="card-title">{{dish.name}}</h5>
+    <p class="card-text">{{dish.price}}</p>
+    <form [formGroup]="cardForm">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend" id="button-addon3">
+          <button class="btn btn-success"
+                  [disabled]="quantity >= 5"
+                  (click)="increaseAmount()">+</button>
+        </div>
+        <input type="text" aria-label="Quantity of product"
+               class="form-control" formControlName="amount">
+        <div class="input-group-append" id="button-addon4">
+          <button class="btn btn-danger"
+                  [disabled]="quantity <=0" (click)="decreaseAmount()">-</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
