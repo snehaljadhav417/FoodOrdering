@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   loginUrl: '/login',
   signUpUrl: '/signup',
-  menu: '/getMenu'
+  menu: '/getMenu',
+  order: '/postOrder'
 };
 
 /*

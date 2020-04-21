@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {LoginService} from "../services/login/login.service";
-import {Router} from "@angular/router";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {LoginService} from '../services/login/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -25,9 +25,9 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  get email() {return this.form.get('email');}
+  get email() {return this.form.get('email'); }
 
-  get password() {return this.form.get('password');}
+  get password() {return this.form.get('password'); }
 
   onSubmit() {
     if (this.isSignUp) {
@@ -37,7 +37,7 @@ export class HomepageComponent implements OnInit {
           this.redirectToMenuPage();
         }, error => {
           console.log(error);
-        })
+        });
     } else {
       this.loginService.login(this.form.value)
         .subscribe(data => {
@@ -45,7 +45,7 @@ export class HomepageComponent implements OnInit {
           this.redirectToMenuPage();
         }, error => {
           console.log(error);
-        })
+        });
     }
   }
 

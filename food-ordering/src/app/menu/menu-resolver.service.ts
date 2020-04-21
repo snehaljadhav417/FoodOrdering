@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {MenuService} from "../services/menu/menu.service";
-import {EMPTY, Observable, of} from "rxjs";
-import {mergeMap, take} from "rxjs/operators";
+import {MenuService} from '../services/menu/menu.service';
+import {EMPTY, Observable, of} from 'rxjs';
+import {mergeMap, take} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
