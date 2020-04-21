@@ -6,7 +6,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" [routerLink]="['/menu']">Menu <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -16,7 +16,7 @@
   </div>
   <div>
     <ul class="navbar-nav my-auto">
-      <li class="nav-item">
+      <li class="nav-item active">
         <a [routerLink]="['/checkout']" class="nav-link">
           <span class="cart">
             <i class="fa fa-shopping-cart"></i>
@@ -27,35 +27,24 @@
   </div>
 </nav>
 <div class="container mt-4">
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{active: tab === 1}"
-        (click)="setTab(1, 'indian')">Indian</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{active: tab === 2}"
-        (click)="setTab(2, 'italian')">Italian</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{active: tab === 3}"
-        (click)="setTab(3, 'mexican')">Mexican</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{active: tab === 4}"
-        (click)="setTab(4, 'american')">Burgers & Fries</a>
-    </li>
-  </ul>
-  <div *ngIf="chunkedData.length === 0" class="d-flex justify-content-center">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
+  <div *ngIf="isCartEmpty">
+    <span class="cart-black">
+      <i class="fa fa-shopping-cart mr-4"></i>
+      Shopping cart is empty.
+    </span>
   </div>
-  <ng-container *ngFor="let item of chunkedData">
-    <div class="row mt-4">
-      <div class="col-sm" *ngFor="let dish of item">
-        <app-card [dish]="dish">
-        </app-card>
+  <div *ngIf="!isCartEmpty">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="bg-grey">
+
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="bg-grey">
+
+        </div>
       </div>
     </div>
-  </ng-container>
+  </div>
 </div>

@@ -8,13 +8,15 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { MenuComponent } from './menu/menu.component';
 import { CardComponent } from './card/card.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     MenuComponent,
-    CardComponent
+    CardComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

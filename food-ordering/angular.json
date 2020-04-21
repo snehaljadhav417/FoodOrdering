@@ -127,8 +127,13 @@
               "devServerTarget": "food-ordering:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "food-ordering"
 }
