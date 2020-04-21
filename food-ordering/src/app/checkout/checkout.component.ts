@@ -10,7 +10,9 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class CheckoutComponent implements OnInit {
   isCartEmpty = true;
   cart = [];
-  total = 0;
+  totalPrice = 0;
+  totalItems = 0;
+  order: any;
 
   checkoutForm = new FormGroup({
     firstName: new FormControl(''),
@@ -38,8 +40,13 @@ export class CheckoutComponent implements OnInit {
     const loadCartValue = this.cartService.loadCart();
     if (loadCartValue.items.length > 0) {
       this.cart = loadCartValue.items;
-      this.total = loadCartValue.total;
+      this.totalPrice = loadCartValue.totalPrice;
+      this.totalItems = loadCartValue.totalItems;
       this.isCartEmpty = false;
     }
+  }
+
+  placeOrder() {
+    console.log(this.checkoutForm.value);
   }
 }

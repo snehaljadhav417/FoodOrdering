@@ -83,13 +83,15 @@ export class CartService {
   }
 
   loadCart() {
-    let total = 0;
+    let totalPrice = 0;
+    let totalItems = 0;
     const items = [];
     const cart = JSON.parse(localStorage.getItem('cart'));
     if (cart === null) {
       return {
         items,
-        total
+        totalPrice,
+        totalItems
       };
     }
     for (const i of cart) {
@@ -99,11 +101,13 @@ export class CartService {
         quantity: item.quantity,
         price: item.product.price * item.quantity
       });
-      total += item.product.price * item.quantity;
+      totalItems += 1;
+      totalPrice += item.product.price * item.quantity;
     }
     return {
       items,
-      total
+      totalPrice,
+      totalItems
     };
   }
 }
