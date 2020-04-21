@@ -78,4 +78,23 @@ export class CartService {
       return localItem.quantity;
     }
   }
+
+  loadCart() {
+    let total = 0;
+    const items = [];
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    for (const i of cart) {
+      const item = JSON.parse(i);
+      items.push({
+        product: item.product,
+        quantity: item.quantity,
+        price: item.product.price * item.quantity
+      });
+      total += item.product.price * item.quantity;
+    }
+    return {
+      items,
+      total
+    };
+  }
 }
