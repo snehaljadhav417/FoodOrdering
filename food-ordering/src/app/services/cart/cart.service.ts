@@ -63,6 +63,9 @@ export class CartService {
 
   getQuantity(id: string) {
     const cart: any = JSON.parse(localStorage.getItem('cart'));
+    if (cart === null) {
+      return 0;
+    }
     let index = -1;
     for (let i = 0; i < cart.length; i++) {
       const localItem: Item = JSON.parse(cart[i]);
@@ -83,6 +86,12 @@ export class CartService {
     let total = 0;
     const items = [];
     const cart = JSON.parse(localStorage.getItem('cart'));
+    if (cart === null) {
+      return {
+        items,
+        total
+      };
+    }
     for (const i of cart) {
       const item = JSON.parse(i);
       items.push({
