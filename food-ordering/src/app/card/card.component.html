@@ -2,7 +2,7 @@
   <figure class="content-img" [ngStyle]="{'background-image': 'url(' + dish.image + ')'}"></figure>
   <div class="card-body">
     <h5 class="card-title">{{dish.name}}</h5>
-    <p class="card-text">{{dish.price}}</p>
+    <p class="card-text">{{dish.price | currency}}</p>
     <form [formGroup]="cardForm">
       <div class="input-group mb-3">
         <div class="input-group-prepend" id="button-addon3">
