@@ -1,0 +1,23 @@
+{
+  "/getMenu/*": {
+    "target": "http://localhost:4200/",
+    "pathRewrite": {
+      "^/getMenu": "/mocks/menu.json"
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/login/*": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/signup/*": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
