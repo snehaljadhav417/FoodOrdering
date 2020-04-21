@@ -43,10 +43,24 @@ export class CheckoutComponent implements OnInit {
       this.totalPrice = loadCartValue.totalPrice;
       this.totalItems = loadCartValue.totalItems;
       this.isCartEmpty = false;
+      const simplifiedCart = [];
+      for (const item of this.cart) {
+        simplifiedCart.push({
+          productId: item.product.id,
+          quantity: item.quantity
+        });
+      }
+      this.order = {
+        cart: simplifiedCart,
+        totalPrice: this.totalPrice
+      };
     }
   }
 
   placeOrder() {
-    console.log(this.checkoutForm.value);
+    const result = {
+      ...this.checkoutForm.value,
+      ...this.order,
+    };
   }
 }
