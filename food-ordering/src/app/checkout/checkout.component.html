@@ -1,0 +1,50 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark justify-content-between bg-dark">
+  <span class="navbar-brand mb-0 h1">Enchanting Aroma</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/menu']">Menu <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/suggestions']">Suggestions</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="navbar-nav my-auto">
+      <li class="nav-item active">
+        <a [routerLink]="['/checkout']" class="nav-link">
+          <span class="cart">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container mt-4">
+  <div *ngIf="isCartEmpty">
+    <span class="cart-black">
+      <i class="fa fa-shopping-cart mr-4"></i>
+      Shopping cart is empty.
+    </span>
+  </div>
+  <div *ngIf="!isCartEmpty">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="bg-grey">
+
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="bg-grey">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
