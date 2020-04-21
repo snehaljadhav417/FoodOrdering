@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-suggestions',
+  templateUrl: './suggestions.component.html',
+  styleUrls: ['./suggestions.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class SuggestionsComponent implements OnInit {
   content: any;
   chunkedData = [];
   chunkSize = 3;
-  tab = 1;
 
   constructor(private route: ActivatedRoute) {
     this.route.data
@@ -20,12 +19,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.divideDataToChunks('indian');
-  }
-
-  setTab(tabNumber: number, cuisine: string) {
-    this.tab = tabNumber;
-    this.divideDataToChunks(cuisine);
+    this.divideDataToChunks('items');
   }
 
   divideDataToChunks(cuisine: string) {
@@ -34,4 +28,5 @@ export class MenuComponent implements OnInit {
       this.chunkedData.push(this.content[cuisine].slice(i, i + this.chunkSize));
     }
   }
+
 }

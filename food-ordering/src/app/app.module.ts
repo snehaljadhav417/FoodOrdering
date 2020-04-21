@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { CardComponent } from './card/card.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { SuggestionsComponent } from './suggestions/suggestions.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HomepageComponent,
     MenuComponent,
     CardComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SuggestionsComponent
   ],
   imports: [
     BrowserModule,

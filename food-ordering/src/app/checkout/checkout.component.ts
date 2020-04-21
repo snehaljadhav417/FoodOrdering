@@ -68,8 +68,12 @@ export class CheckoutComponent implements OnInit {
     this.checkoutService.postOrder(checkoutData)
       .subscribe(data => {
         console.log(data);
+        localStorage.removeItem('cart');
+        this.isCartEmpty = true;
       }, err => {
         console.log(err);
+        localStorage.removeItem('cart');
+        this.isCartEmpty = true;
       });
   }
 }

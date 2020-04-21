@@ -4,10 +4,19 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {MenuComponent} from './menu/menu.component';
 import {MenuResolverService} from './menu/menu-resolver.service';
 import {CheckoutComponent} from './checkout/checkout.component';
+import {SuggestionsComponent} from './suggestions/suggestions.component';
+import {SuggestionResolverService} from './suggestions/suggestion-resolver.service';
 
 
 const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
+  {
+    path: 'suggestions',
+    component: SuggestionsComponent,
+    resolve: {
+      content: SuggestionResolverService
+    }
+  },
   {
     path: 'menu',
     component: MenuComponent,
