@@ -7,7 +7,7 @@ export const environment = {
   loginUrl: '/login',
   signUpUrl: '/signup',
   menu: '/getMenu',
-  order: '/postOrder',
+  order: '/order',
   suggestion: '/getSuggestions'
 };
 

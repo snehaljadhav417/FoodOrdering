@@ -23,7 +23,7 @@
     "changeOrigin": true,
     "logLevel": "debug"
   },
-  "/postOrder/*": {
+  "/order/*": {
     "target": "http://localhost:3000",
     "secure": false,
     "changeOrigin": true,
