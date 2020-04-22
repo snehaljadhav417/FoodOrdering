@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../../../environments/environment';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,9 @@ export class SuggestionService {
 
   getSuggestions() {
     const url = environment.suggestion;
-    return this.http.get(url);
+    const options = {
+      params: new HttpParams().set('cust_id', localStorage.getItem('cust_id'))
+    };
+    return this.http.get(url, options);
   }
 }

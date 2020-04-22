@@ -33,7 +33,8 @@ export class HomepageComponent implements OnInit {
     if (this.isSignUp) {
       this.loginService.signUp(this.form.value)
         .subscribe(data => {
-          console.log(data);
+          // @ts-ignore
+          localStorage.setItem('cust_id', data.id);
           this.redirectToMenuPage();
         }, error => {
           console.log(error);
@@ -41,7 +42,8 @@ export class HomepageComponent implements OnInit {
     } else {
       this.loginService.login(this.form.value)
         .subscribe(data => {
-          console.log(data);
+          // @ts-ignore
+          localStorage.setItem('cust_id', data.id);
           this.redirectToMenuPage();
         }, error => {
           console.log(error);
