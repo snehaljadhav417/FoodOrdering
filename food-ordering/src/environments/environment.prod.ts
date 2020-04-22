@@ -3,6 +3,6 @@ export const environment = {
   loginUrl: '/login',
   signUpUrl: '/signup',
   menu: '/getMenu',
-  order: '/checkout',
+  order: '/order',
   suggestion: '/getSuggestions'
 };
