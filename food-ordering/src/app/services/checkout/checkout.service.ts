@@ -11,6 +11,8 @@ export class CheckoutService {
 
   postOrder(body) {
     const url = environment.order;
+    // @ts-ignore
+    body.cust_id = Number(localStorage.getItem('cust_id'));
     return this.http.post(url, body);
   }
 }
