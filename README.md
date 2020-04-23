@@ -4,6 +4,8 @@
 
 ### Clone repository - https://github.com/snehaljadhav417/FoodOrdering.git
 
+### Prerequisites - Node.js 10+
+
 ## Front-End Installation (Angular)
 
 ###* cd food-ordering/
