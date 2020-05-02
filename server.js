@@ -1,10 +1,9 @@
 //importing modules
- var express= require('express');
- var bodyparser= require('body-parser');
- var cors= require('cors');
+var express= require('express');
+var bodyparser= require('body-parser');
+var cors= require('cors');
 
 const app=express();
-const port= 3000;
 //const route= require('./route/routes');
 
 //adding middleware
@@ -26,4 +25,3 @@ app.listen(port,()=>{
 
 
 
-    
