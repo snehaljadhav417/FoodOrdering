@@ -121,8 +121,8 @@ app.delete("/api/contacts/:id", function(req, res) {
   });
 });
 
-app.get('*', function (req, res) {
-  res.sendFile('/dist/index.html');
+app.all('*', function (req, res) {
+  res.sendFile('index.html', { root: distDir });
 });
 //app.use('/cust', route);
 //app.use(express.static('public'));
