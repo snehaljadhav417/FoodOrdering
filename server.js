@@ -123,11 +123,7 @@ app.delete("/api/contacts/:id", function(req, res) {
 
 app.get('/',(req,res)=>{
     res.send('Hi');
-});
-
-app.listen(port,()=>{
-  console.log('Server has been started at'+ port);
-  });*/
+});*/
 
 
 
