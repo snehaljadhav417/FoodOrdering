@@ -120,6 +120,10 @@ app.delete("/api/contacts/:id", function(req, res) {
     }
   });
 });
+
+app.get('*', function (req, res) {
+  res.sendFile('/dist/index.html');
+});
 //app.use('/cust', route);
 //app.use(express.static('public'));
 /*require("./route/routes.js")(app);
