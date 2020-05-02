@@ -1,7 +1,7 @@
 //importing modules
 var express= require('express');
 var bodyparser= require('body-parser');
-var cors= require('cors');
+//var cors= require('cors');
 var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 
@@ -12,10 +12,13 @@ const app=express();
 //const route= require('./route/routes');
 
 //adding middleware
-app.use(cors());
+//app.use(cors());
 app.use(bodyparser.json());
 //app.use(bodyparser.urlencoded({ extended: true}));
 
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
