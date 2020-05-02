@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { CardComponent } from './card/card.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
+import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
+import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,15 @@ import { SuggestionsComponent } from './suggestions/suggestions.component';
     MenuComponent,
     CardComponent,
     CheckoutComponent,
-    SuggestionsComponent
+    SuggestionsComponent,
+    ContactDetailsComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

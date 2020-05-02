@@ -1,0 +1,22 @@
+{
+  "name": "food-ordering",
+  "description": "Food ordering app",
+  "keywords": [
+    "MEAN",
+    "Angular",
+    "Node",
+    "MongoDB",
+    "mLab"
+  ],
+  "repository": "https://github.com/snehaljadhav417/FoodOrdering",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
