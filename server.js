@@ -57,7 +57,7 @@ app.post("/signup", function(req, res) {
         handleError(res, err.message, "Failed to create new user.");
       } else {
         const returnData = {
-          id: -1, ...doc.ops[0]
+          id: doc.ops[0]["_id"]
         };
         res.status(201).json(returnData);
       }
