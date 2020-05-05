@@ -30,7 +30,7 @@
 
 Copy connection string below
  
-[Connection String](mongodb://heroku_6s5dx2fv:kulaua0jqgnd68126f4q5iurlt@ds241019.mlab.com:41019/heroku_6s5dx2fv?authSource=heroku_6s5dx2fv&readPreference=primary&appname=MongoDB%20Compass&ssl=false)
+`mongodb://heroku_6s5dx2fv:kulaua0jqgnd68126f4q5iurlt@ds241019.mlab.com:41019/heroku_6s5dx2fv?authSource=heroku_6s5dx2fv&readPreference=primary&appname=MongoDB%20Compass&ssl=false)`
  
 ### Option 2) Mongo Shell
 
