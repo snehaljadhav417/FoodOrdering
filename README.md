@@ -36,5 +36,5 @@ Copy connection string below
 
 Copy command below
 
-`mongo ds241019.mlab.com:41019/heroku_6s5dx2fv -u heroku_6s5dx2fv -p kulaua0jqgnd68126f4q5iurl`
+`mongo ds241019.mlab.com:41019/heroku_6s5dx2fv -u heroku_6s5dx2fv -p kulaua0jqgnd68126f4q5iurlt`
  
