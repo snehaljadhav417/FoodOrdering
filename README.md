@@ -1,13 +1,13 @@
 # FoodOrdering
 
 ### Access Live Application -
-####[Food Ordering Portal](https://protected-ridge-98118.herokuapp.com/)
+#### [Food Ordering Portal](https://protected-ridge-98118.herokuapp.com/)
 
 ### Download zip - 
-####[Zip](https://github.com/snehaljadhav417/FoodOrdering)
+#### [Zip](https://github.com/snehaljadhav417/FoodOrdering)
 
 ### Clone repository - 
-####[GitHub](https://github.com/snehaljadhav417/FoodOrdering.git)
+#### [GitHub](https://github.com/snehaljadhav417/FoodOrdering.git)
 
 #### Local Installation Prerequisites - Node.js 10+
 
@@ -26,13 +26,13 @@
 #### Run local [ExpressJS](http://localhost:3000)
 
 ## MongoDB Local Connection String
-###Option 1) Mongo Compass
+### Option 1) Mongo Compass
 
 Copy connection string below
  
 [Connection String](mongodb://heroku_6s5dx2fv:kulaua0jqgnd68126f4q5iurlt@ds241019.mlab.com:41019/heroku_6s5dx2fv?authSource=heroku_6s5dx2fv&readPreference=primary&appname=MongoDB%20Compass&ssl=false)
  
-###Option 2) Mongo Shell
+### Option 2) Mongo Shell
 
 Copy command below
 
