@@ -1,32 +1,40 @@
 # FoodOrdering
 
-### Download zip - https://github.com/snehaljadhav417/FoodOrdering
+### Access Live Application -
+####[Food Ordering Portal](https://protected-ridge-98118.herokuapp.com/)
 
-### Clone repository - https://github.com/snehaljadhav417/FoodOrdering.git
+### Download zip - 
+####[Zip](https://github.com/snehaljadhav417/FoodOrdering)
 
-### Prerequisites - Node.js 10+
+### Clone repository - 
+####[GitHub](https://github.com/snehaljadhav417/FoodOrdering.git)
 
-## Front-End Installation (Angular)
+#### Local Installation Prerequisites - Node.js 10+
 
-###* cd food-ordering/
-###* npm install
-###* npm start
+#### Run command - npm install
 
-#### Access Front End at - http://localhost:4000
+## Front-End Local (Angular)
+### Command to run Angular client
+`npm run start:client`
 
+#### Run local [Angular](http://localhost:4000)
 
-## Back-End Installation (ExpressJS)
+## Back-End Local (ExpressJS)
+### Command to run ExpressJS backend
+`npm run start:server`
 
-###* cd crud_backend/
-###* npm install
-###* npx nodemon
+#### Run local [ExpressJS](http://localhost:3000)
 
-#### Run Back End in background. URL - http://localhost:3000
+## MongoDB Local Connection String
+###Option 1) Mongo Compass
 
-## MySQL Installation
+Copy connection string below
+ 
+[Connection String](mongodb://heroku_6s5dx2fv:kulaua0jqgnd68126f4q5iurlt@ds241019.mlab.com:41019/heroku_6s5dx2fv?authSource=heroku_6s5dx2fv&readPreference=primary&appname=MongoDB%20Compass&ssl=false)
+ 
+###Option 2) Mongo Shell
 
-###* Import create.sql script
-###* Import load.sql script
+Copy command below
 
-#### Update MySQL root password in file:
-#### FoodOrdering/crud_backend/model/db.js
+`mongo ds241019.mlab.com:41019/heroku_6s5dx2fv -u heroku_6s5dx2fv -p kulaua0jqgnd68126f4q5iurl`
+ 
