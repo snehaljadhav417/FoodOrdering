@@ -48,7 +48,7 @@ export class CheckoutComponent implements OnInit {
       const simplifiedCart = [];
       for (const item of this.cart) {
         simplifiedCart.push({
-          productId: item.product.id,
+          productId: item.product._id,
           quantity: item.quantity
         });
       }

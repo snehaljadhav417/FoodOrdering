@@ -24,7 +24,7 @@ export class CartService {
       let index = -1;
       for (let i = 0; i < cart.length; i++) {
         const localItem: Item = JSON.parse(cart[i]);
-        if (localItem.product.id === product.id) {
+        if (localItem.product._id === product._id) {
           index = i;
           break;
         }
@@ -46,7 +46,7 @@ export class CartService {
     let index = -1;
     for (let i = 0; i < cart.length; i++) {
       const item: Item = JSON.parse(cart[i]);
-      if (item.product.id === id) {
+      if (item.product._id === id) {
         index = i;
         break;
       }
@@ -69,7 +69,7 @@ export class CartService {
     let index = -1;
     for (let i = 0; i < cart.length; i++) {
       const localItem: Item = JSON.parse(cart[i]);
-      if (localItem.product.id === id) {
+      if (localItem.product._id === id) {
         index = i;
         break;
       }

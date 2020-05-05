@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.quantity = this.cartService.getQuantity(this.dish.id);
+    this.quantity = this.cartService.getQuantity(this.dish._id);
     this.cardForm = new FormGroup({
       amount: new FormControl(this.quantity)
     });
