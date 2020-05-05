@@ -6,12 +6,9 @@ import {MenuResolverService} from './menu/menu-resolver.service';
 import {CheckoutComponent} from './checkout/checkout.component';
 import {SuggestionsComponent} from './suggestions/suggestions.component';
 import {SuggestionResolverService} from './suggestions/suggestion-resolver.service';
-import {ContactListComponent} from './contacts/contact-list/contact-list.component';
-
 
 const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'contact', component: ContactListComponent },
   {
     path: 'suggestions',
     component: SuggestionsComponent,

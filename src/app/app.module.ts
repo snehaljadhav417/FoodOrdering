@@ -10,8 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { CardComponent } from './card/card.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
-import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
-import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +18,7 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
     MenuComponent,
     CardComponent,
     CheckoutComponent,
-    SuggestionsComponent,
-    ContactDetailsComponent,
-    ContactListComponent
+    SuggestionsComponent
   ],
   imports: [
     BrowserModule,
