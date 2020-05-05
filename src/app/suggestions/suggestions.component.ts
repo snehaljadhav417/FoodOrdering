@@ -10,6 +10,7 @@ export class SuggestionsComponent implements OnInit {
   content: any;
   chunkedData = [];
   chunkSize = 3;
+  loading = true;
 
   constructor(private route: ActivatedRoute) {
     this.route.data
@@ -20,6 +21,7 @@ export class SuggestionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.divideDataToChunks('items');
+    this.loading = false;
   }
 
   divideDataToChunks(cuisine: string) {
