@@ -38,3 +38,5 @@ Copy command below
 
 `mongo ds241019.mlab.com:41019/heroku_6s5dx2fv -u heroku_6s5dx2fv -p kulaua0jqgnd68126f4q5iurlt`
  
+ 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)

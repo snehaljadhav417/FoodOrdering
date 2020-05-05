@@ -1,6 +1,6 @@
 {
-  "name": "food-ordering",
-  "description": "Food ordering app",
+  "name": "Food Ordering",
+  "description": "Food ordering application to order various cuisines with complete checkout process. It uses MEAN stack framework.",
   "keywords": [
     "MEAN",
     "Angular",
